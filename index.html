@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Library</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header"><h1>Library</h1></div>
+        <div class="database-container">
+            <button id="add-btn">Add Book</button>
+            <table id="book-table">
+                <tr>
+                    <th>Author</th>
+                    <th>Title</th>
+                    <th>Pages</th>
+                    <th>Read</th>
+                    <th>Remove</th>
+                </tr>
+                <tr>
+                    <td>John Doe</td>
+                    <td>Book Title</td>
+                    <td>500</td>
+                    <td>Yes</td>
+                    <td><button id="remove">x</button></td>
+
+                </tr>
+            </table>
+        </div>
+
+        <div id="form-container">
+            <button id="cancel">Cancel</button>
+            <form id="add-form">
+                <label for="author">Author:</label><br>
+                <input type="text" id="author" name="author"><br>
+                <label for="title">Title:</label><br>
+                <input type="text" id="title" name="title"><br>
+                <label for="pages">Pages:</label><br>
+                <input type="text" id="pages" name="pages"><br>
+                <input type="radio" id="read" name="status" value="Read">
+                <label for="read">Read</label>
+                <input type="radio" id="unread" name="status" value="Not Read">
+                <label for="unread">Not Read</label><br>
+                <input type="button" value="Submit" id="submit">
+            </form>
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+
+</body>
+</html>
