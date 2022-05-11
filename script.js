@@ -8,7 +8,7 @@ const form = document.getElementById("add-form");
 
 cancelBtn.addEventListener("click", hideForm);
 addBtn.addEventListener("click", showForm);
-submitBtn.addEventListener("click", addBook);
+submitBtn.addEventListener("click", validateForm);
 document.querySelector('body').addEventListener('click', removeBook);
 
 function showForm() {
@@ -17,6 +17,7 @@ function showForm() {
  
 function hideForm() {
     bookForm.style.display = "none";
+    form.reset();
 }
 
 let myLibrary = []
@@ -54,7 +55,7 @@ function addBook() {
     newRow.appendChild(newRead);
 
     const newRemove = document.createElement("td");
-    newRemove.innerHTML = `<button class="remove">x</button>`
+    newRemove.innerHTML = `<button class="remove"></button>`
     newRow.appendChild(newRemove);
 
     const addToLibrary = new Book(author, title, pages, readStatus);
@@ -77,4 +78,28 @@ function removeBook(e) {
     } else {
         return;
     }
+}
+
+function validateForm() {
+    const author = form.elements['author'].value;
+    const title = form.elements['title'].value;
+    const pages = form.elements['pages'].value;
+    const readStatus = form.elements['status'].value;
+
+    if (author == "" || !isNaN(author)) {
+        form.elements['author'].focus();
+        return false;
+    } if (title == "") {
+        form.elements['title'].focus();
+        return false;
+    } if (pages == "" || isNaN(pages)) {
+        form.elements['pages'].focus();
+        return false;
+    } if (readStatus == "") {
+        return false;
+    }
+    else {
+        return addBook();
+    }
+
 }
