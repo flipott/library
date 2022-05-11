@@ -27,14 +27,23 @@ body, html {
     color: white;
     font-size: 1.5rem;
     font-weight: bold;
+    border-radius: 15px;
 }
 
 #book-table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
     text-align: center;
-
+    text-transform: capitalize;
+    width: ;
 }
+
+th, td {
+    width: 10px;
+}
+
+
+
 
 th {
     background: coral;
@@ -50,4 +59,56 @@ th {
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 0 0 0 max(100vh, 100vw) rgba(0, 0, 0, .3);
+    padding: 25px;
+    border-radius: 15px;
+}
+
+
+#form-container p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#cancel, .remove {
+    align-self: flex-end;
+    box-sizing:border-box;
+    width:20px;
+    height:20px;
+    border-width:3px;
+    border-style: solid;
+    border-color:red;
+    border-radius:100%;
+    background: -webkit-linear-gradient(-45deg, transparent 0%, transparent 46%, white 46%,  white 56%,transparent 56%, transparent 100%), -webkit-linear-gradient(45deg, transparent 0%, transparent 46%, white 46%,  white 56%,transparent 56%, transparent 100%);
+    background-color:red;
+}
+
+
+#cancel:hover, .remove:hover {
+    border-color: gray;
+    background-color: gray;
+    cursor: pointer;
+}
+
+input {
+    margin: 8px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+#submit {
+    border: none;
+    border-radius: 8px;
+    padding: 5px 10px;
+    background-color: rgb(99, 216, 152);
+    font-weight: bold;
+}
+
+input {
+    overflow: scroll;
 }
