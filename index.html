@@ -18,26 +18,29 @@
                     <th>Author</th>
                     <th>Title</th>
                     <th>Pages</th>
-                    <th>Read</th>
+                    <th>Read Status</th>
                     <th>Remove</th>
                 </tr>
             </table>
         </div>
 
         <div id="form-container">
-            <button id="cancel">Cancel</button>
-            <form id="add-form">
+            <button id="cancel"></button>
+            <p>Add Book</p>
+            <form id="add-form" onsubmit="validateForm();return false">
                 <label for="author">Author:</label><br>
                 <input type="text" id="author" name="author"><br>
                 <label for="title">Title:</label><br>
                 <input type="text" id="title" name="title"><br>
                 <label for="pages">Pages:</label><br>
                 <input type="text" id="pages" name="pages"><br>
-                <input type="radio" id="read" name="status" value="Read">
-                <label for="read">Read</label>
-                <input type="radio" id="unread" name="status" value="Not Read">
-                <label for="unread">Not Read</label><br>
-                <input type="button" value="Submit" id="submit">
+                <div class="radio">
+                    <input type="radio" id="read" name="status" value="Read">
+                    <label for="read">Read</label>
+                    <input type="radio" id="unread" name="status" value="Not Read">
+                    <label for="unread">Not Read</label><br>
+                </div>
+                <input type="submit" value="Submit" id="submit">
             </form>
         </div>
 
