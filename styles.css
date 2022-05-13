@@ -35,15 +35,11 @@ body, html {
     border-collapse: collapse;
     text-align: center;
     text-transform: capitalize;
-    width: ;
 }
 
 th, td {
     width: 10px;
 }
-
-
-
 
 th {
     background: coral;
