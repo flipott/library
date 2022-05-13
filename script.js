@@ -4,12 +4,13 @@ const cancelBtn = document.getElementById("cancel");
 const submitBtn = document.getElementById("submit");
 const table = document.getElementById("book-table");
 const form = document.getElementById("add-form");
+let newStatus;
 
 
 cancelBtn.addEventListener("click", hideForm);
 addBtn.addEventListener("click", showForm);
 submitBtn.addEventListener("click", validateForm);
-document.querySelector('body').addEventListener('click', removeBook);
+document.querySelector('body').addEventListener('click', editEntry);
 
 function showForm() {
     bookForm.style.display = "flex";
@@ -51,7 +52,7 @@ function addBook() {
     newRow.appendChild(newPages);
 
     const newRead = document.createElement("td");
-    newRead.innerHTML = readStatus;
+    newRead.innerHTML = readStatus + `<button class="change-read">Change</button>`
     newRow.appendChild(newRead);
 
     const newRemove = document.createElement("td");
@@ -68,13 +69,23 @@ function addBook() {
     form.reset();
 }
 
-function removeBook(e) {
+function editEntry(e) {
     if (e.target.className == "remove") {
         let tempIndex = e.target.parentElement.parentElement.getAttribute("data-index");
         console.log(tempIndex);
         myLibrary.splice(tempIndex, 1);
         e.target.parentElement.parentElement.remove();
         console.log(myLibrary);
+    } else if (e.target.className == "change-read") {
+         if (e.target.previousSibling.textContent == "Not Read") {
+            e.target.previousSibling.remove();
+            newStatus = document.createTextNode("Read")
+            e.target.parentElement.insertBefore(newStatus, e.target.parentElement.firstChild);
+         } else {
+            e.target.previousSibling.remove();
+            newStatus = document.createTextNode("Not Read")
+            e.target.parentElement.insertBefore(newStatus, e.target.parentElement.firstChild);
+         }
     } else {
         return;
     }
