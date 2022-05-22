@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;400;700&family=Public+Sans:wght@100;200;300;700&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
     <title>Library</title>
 </head>
@@ -14,13 +17,15 @@
         <div class="database-container">
             <button id="add-btn">Add Book</button>
             <table id="book-table">
-                <tr>
+                <thead>
                     <th>Author</th>
                     <th>Title</th>
                     <th>Pages</th>
                     <th>Read Status</th>
                     <th>Remove</th>
-                </tr>
+                </thead>
+                <tbody id = "table-body">
+                </tbody>
             </table>
         </div>
 
@@ -29,29 +34,20 @@
             <p>Add Book</p>
             <form id="add-form" onsubmit="validateForm();return false">
                 <label for="author">Author:</label><br>
-                <input type="text" id="author" name="author" required><br>
+                <input type="text" id="author" name="author" ><br>
                 <label for="title">Title:</label><br>
-                <input type="text" id="title" name="title" required><br>
+                <input type="text" id="title" name="title"><br>
                 <label for="pages">Pages:</label><br>
-                <input type="text" id="pages" name="pages" required><br>
+                <input type="text" id="pages" name="pages"><br>
                 <div class="radio">
-                    <input type="radio" id="read" name="status" value="Read" required>
+                    <input type="radio" id="read" name="status" value="Read">
                     <label for="read">Read</label>
-                    <input type="radio" id="unread" name="status" value="Not Read" required>
+                    <input type="radio" id="unread" name="status" value="Not Read">
                     <label for="unread">Not Read</label><br>
                 </div>
                 <input type="submit" value="Submit" id="submit">
             </form>
         </div>
-
-
-
-
     </div>
-
-
-
-
-
 </body>
 </html>
