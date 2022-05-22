@@ -1,8 +1,19 @@
+:root {
+    --light-green: #dceed1ff;
+    --dark-green: rgb(118, 136, 118);
+    --purple: #736372ff;
+    --brown: #a18276ff;
+    --turquoise: #7a918dff;
+
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Public Sans', sans-serif;
+}
+
 body, html {
-    background: lightblue;
+    background: var(--light-green);
     height: 100vh;
     overflow: hidden;
-    font-family: sans-serif;
+    font-family: 'Public Sans', sans-serif;
 }
 
 .container {
@@ -12,10 +23,17 @@ body, html {
     height: 100vh;
 }
 
+h1 {
+    font-family: 'Kanit', sans-serif;
+    font-size: 4rem;
+    color: var(--purple);
+}
+
 .database-container {
     display: flex;
     flex-direction: column;
     min-width: 75%;
+    font-family: 'Public Sans', sans-serif;
 }
 
 #add-btn {
@@ -23,33 +41,54 @@ body, html {
     border: none;
     padding: 10px 15px;
     margin-bottom: 15px;
-    background-color: steelblue;
+    background-color: var(--dark-green);
     color: white;
+    font-family: 'Kanit', sans-serif;
     font-size: 1.5rem;
     font-weight: bold;
     border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(114, 114, 113, 0.5);
 }
 
 #book-table, th, td {
-    border: 1px solid black;
     border-collapse: collapse;
     text-align: center;
     text-transform: capitalize;
+    padding: 15px;
 }
 
-th, td {
-    width: 10px;
+#book-table {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(114, 114, 113, 0.5);
 }
+
+tr:nth-child(even) {
+    background: rgb(230, 230, 230);
+}
+
 
 th {
-    background: coral;
+    background: var(--purple);
+    font-weight: 700;
+    color: white;
 }
 
+.change-read {
+    font-family: 'Public Sans', sans-serif;
+    border: none;
+    background: var(--dark-green);
+    color: white;
+    padding: 5px;
+    border-radius: 8px;
+    margin-left: 10px;
+}
 
 #form-container {
     display: none;
     flex-direction: column;
-    background: steelblue;
+    background: var(--turquoise);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -57,8 +96,9 @@ th {
     box-shadow: 0 0 0 max(100vh, 100vw) rgba(0, 0, 0, .3);
     padding: 25px;
     border-radius: 15px;
+    color: white;
+    
 }
-
 
 #form-container p {
     font-size: 1.5rem;
@@ -75,14 +115,13 @@ th {
     height:20px;
     border-width:3px;
     border-style: solid;
-    border-color:red;
+    border-color:var(--brown);;
     border-radius:100%;
     background: -webkit-linear-gradient(-45deg, transparent 0%, transparent 46%, white 46%,  white 56%,transparent 56%, transparent 100%), -webkit-linear-gradient(45deg, transparent 0%, transparent 46%, white 46%,  white 56%,transparent 56%, transparent 100%);
-    background-color:red;
+    background-color:var(--brown);
 }
 
-
-#cancel:hover, .remove:hover {
+#cancel:hover, .remove:hover, #add-btn:hover, #submit:hover {
     border-color: gray;
     background-color: gray;
     cursor: pointer;
@@ -101,7 +140,7 @@ form {
     border: none;
     border-radius: 8px;
     padding: 5px 10px;
-    background-color: rgb(99, 216, 152);
+    background-color: var(--light-green);
     font-weight: bold;
 }
 
