@@ -34,11 +34,11 @@ function Book(author, title, pages, read) {
     this.read = read;
 }
 
-testBook = new Book("John Doe", "Traveling!", 500, "Not Read");
-testBookTwo = new Book("Joey Gafmen", "Spellitout", 222, "Read");
-myLibrary.push(testBook);
-myLibrary.push(testBookTwo);
-displayBooks();
+// testBook = new Book("John Doe", "Traveling!", 500, "Not Read");
+// testBookTwo = new Book("Joey Gafmen", "Spellitout", 222, "Read");
+// myLibrary.push(testBook);
+// myLibrary.push(testBookTwo);
+// displayBooks();
 
 //Loops through myLibrary array and displays books accordingly
 function displayBooks() {  
@@ -68,6 +68,7 @@ function displayBooks() {
     
         const newRead = document.createElement("td");
         newRead.innerHTML = readStatus + `<button class="change-read">Change</button>`
+        newRead.setAttribute("class", "status-section");
         newRow.appendChild(newRead);
     
         const newRemove = document.createElement("td");
