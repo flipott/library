@@ -74,6 +74,15 @@ th {
     background: var(--purple);
     font-weight: 700;
     color: white;
+    width: 20%;
+}
+
+td {
+    max-width: 100px;
+    /* min-width: 70px; */
+    overflow: auto;
+    white-space: inherit;
+    overflow-wrap:break-word;
 }
 
 .change-read {
@@ -81,16 +90,16 @@ th {
     border: none;
     background: var(--dark-green);
     color: white;
-    padding: 5px;
+    padding: 2px 5px;
+    font-size: 0.70rem;
     border-radius: 8px;
-    position: fixed;
-    margin-left: 140px;
     align-self: center;
 }
 
-.status-section {
-    display: flex;
-    justify-content: space-around;
+.status-section p {
+    padding: 0;
+    margin: 0;
+    min-width: 70px;
 }
 
 #form-container {
@@ -128,10 +137,6 @@ th {
     background: -webkit-linear-gradient(-45deg, transparent 0%, transparent 46%, white 46%,  white 56%,transparent 56%, transparent 100%), -webkit-linear-gradient(45deg, transparent 0%, transparent 46%, white 46%,  white 56%,transparent 56%, transparent 100%);
     background-color:var(--brown);
 }
-/* 
-.remove {
-    margin-left: 45px;
-} */
 
 #cancel:hover, .remove:hover, #add-btn:hover, #submit:hover, .change-read:hover {
     border-color: gray;
@@ -183,12 +188,4 @@ form {
 
 label {
     margin-bottom: 5px;
-}
-
-@media (max-width: 700px) {
-
-    .remove {
-        margin-left: 45px;
-    }
-
 }
