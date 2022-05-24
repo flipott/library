@@ -67,7 +67,7 @@ function displayBooks() {
         newRow.appendChild(newPages);
     
         const newRead = document.createElement("td");
-        newRead.innerHTML = readStatus + `<button class="change-read">Change</button>`
+        newRead.innerHTML = "<p>" + readStatus + "</p>" + `<button class="change-read">Change</button>`
         newRead.setAttribute("class", "status-section");
         newRow.appendChild(newRead);
     
@@ -121,7 +121,7 @@ function validateForm() {
     const title = form.elements['title'].value;
     const pages = form.elements['pages'].value;
     const readStatus = form.elements['status'].value;
-
+    
     if (author == "" || !isNaN(author)) {
         form.elements['author'].focus();
         return false;
