@@ -1,5 +1,14 @@
-# library
+# Library
 
-A basic library app built with HTML, CSS, and JS. Showcases use of JavaScript objects and controlling of DOM elements.
+A basic library app that users can add books to. Showcases use of JavaScript objects and HTML forms.
 
-Live page viewable at https://flipott.github.io/library/
+Live page viewable here: https://flipott.github.io/library/
+
+# Features
+- Add and remove books
+- Change read status
+- Client-side form validation
+- CSS table layout
+
+# Tools Used
+[![My Skills](https://skillicons.dev/icons?i=html,css,js)](https://skillicons.dev)
